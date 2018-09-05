@@ -1,0 +1,34 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <!-- <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view> -->
+<view>
+<view class='listview'>
+<block wx:for="{{notes}}" wx:key="{{index}}">
+  <view class='item'>
+    <image class='head_icon' src='../../images/pic{{index + 1}}.png'></image>
+    <text>{{notes[index].title}}</text>
+    <view class='msg-menu'>
+      <view id='{{item.id}}' class='menu-delete'>
+          完成啦
+      </view>
+      <view id='{{item.id}}' class='menu-mark'>
+          重要
+      </view>
+    </view>
+  </view>
+</block>
+</view>
+<view bindtap="add_note">
+<image class="add_icon" src='../../images/add.png'></image>
+</view>
+</view>
+</view>

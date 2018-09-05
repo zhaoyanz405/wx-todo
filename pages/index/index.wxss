@@ -1,0 +1,77 @@
+/**index.wxss**/
+.userinfo {
+  display: flex;
+  align-items: center;
+}
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+.userinfo-nickname {
+  color: #aaa;
+}
+.usermotto {
+  margin-top: 10px;
+}
+.container {
+  padding: 20rpx 0;
+}
+.add_icon{
+  position: fixed;
+  width: 65px;
+  height: 65px;
+  bottom: 30px;
+  right: 20px;
+}
+.listview{
+  margin-top: 50px;
+}
+.item{
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  margin: 5px;
+  height: 60px;
+  width: 94vw;
+  border: 1px solid #edecee;
+}
+.head_icon{
+  margin-left: 10px;
+  width: 30px;
+  height: 30px;
+}
+.item text{
+  margin-left: 20px;
+  height: 25px;
+
+}
+.todo_icon{
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 30px;
+  height: 30px;
+}
+.menu-delete {
+  position: absolute;
+  width: 150rpx;
+  height: 148rpx;
+  top:1rpx;
+  right: 0;
+  background-color: rgb(255, 58, 50);
+  color:#FFF;
+  text-align: center;
+  line-height:150rpx;
+}
+.menu-mark {
+  position: absolute;
+  width: 200rpx;
+  height: 148rpx;
+  top:1rpx;
+  right: 150rpx;
+  background-color: rgb(200, 199, 205);
+  color:#FFF;
+  text-align: center;
+  line-height:150rpx;
+}

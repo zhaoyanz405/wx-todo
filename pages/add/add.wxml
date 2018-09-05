@@ -1,0 +1,15 @@
+<!--pages/add/add.wxml-->
+<view>
+    <view class='head'>
+      <text class='head-text'>创建备忘信息</text>
+      <text class='head-finish' bindtap='save'>完成</text>
+    </view>
+    <view class='main'>
+      <image class='icon' src='../../images/pic25.png'></image>
+      <input class='title' type='text' placeholder='----   起个标题呐    ----' bindinput='get_title' maxlength='20'></input>
+    </view>
+    <view class='note'>
+      <textarea type="text" placeholder="记下备忘信息哦~" bindinput='noting' maxlength='-1' show-confirm-bar='true'
+        adjust-position='true'></textarea>
+    </view>
+</view>
