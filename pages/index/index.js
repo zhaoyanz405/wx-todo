@@ -48,7 +48,7 @@ Page({
         if (res.data === undefined || res.data == [] || res.data == '') {
           first_note['id'] = Date.now()
           first_note['title'] = '我爱猪猪'
-          first_note['content'] = '猪猪看这里~~'
+          first_note['content'] = '猪猪看这里~~\n空的话就会自动新建一个哦~~~'
           res.data = [first_note]
         }
         that.setData({
