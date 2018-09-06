@@ -13,18 +13,18 @@
 <view>
 <view class='listview'>
 <block wx:for="{{notes}}" wx:key="{{index}}">
+<view>
   <view class='item'>
-    <image class='head_icon' src='../../images/pic{{index + 1}}.png'></image>
-    <text>{{notes[index].title}}</text>
-    <view class='msg-menu'>
-      <view id='{{item.id}}' class='menu-delete'>
-          完成啦
-      </view>
-      <view id='{{item.id}}' class='menu-mark'>
-          重要
-      </view>
+    <view class='item-title'>
+      <image class='small_icon head_icon' src='../../images/pic{{index + 1}}.png'></image>
+      <text selectable='false'>{{notes[index].title}}</text>
+      <image class='small_icon icon-off' src='../../images/off.png'></image>
     </view>
   </view>
+  <view class='item-content'>
+    <text class='text-content'>{{notes[index].content}}</text>
+  </view>
+</view>
 </block>
 </view>
 <view bindtap="add_note">

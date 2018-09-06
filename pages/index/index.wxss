@@ -25,6 +25,10 @@
   bottom: 30px;
   right: 20px;
 }
+.small_icon{
+  width: 20px;
+  height: 20px;
+}
 .listview{
   margin-top: 50px;
 }
@@ -33,19 +37,57 @@
   align-items: center;
   flex-direction: row;
   margin: 5px;
-  height: 60px;
+  margin-bottom: 0px;
   width: 94vw;
-  border: 1px solid #edecee;
+  border: 1px solid #efeff1;
+  border-top: none;
+}
+.item-title{
+  display: flex;
+  justify-content: space-between;
+  background: #faf9f9;
+  border-bottom: 1px solid #efeff1;
+  margin: 0;
+  width: 100%;
+  text-align: left;
+  padding: 10px 16px;
+}
+.item-content{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0px;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-bottom: 10px;
+  width: 94vw;
+  border: 1px solid #efeff1;
+  border-top: none;
+  min-height: 50px;
+}
+.text-content{
+  text-align:center;
+  align-items:center;
+  justify-content: center;
+  margin: auto;
+  font-size: 13px;
+}
+.icon-off{
+  margin-left: 7px;
+  margin-right: 7px;
+  width: 15px;
+  height: 15px;
 }
 .head_icon{
-  margin-left: 10px;
-  width: 30px;
-  height: 30px;
+  margin-left: 7px;
+  width: 20px;
+  height: 20px;
 }
 .item text{
   margin-left: 20px;
-  height: 25px;
-
+  margin-right: 20px;
+  font-size: 14px;
+  align-items: center;
 }
 .todo_icon{
   margin-left: 10px;
