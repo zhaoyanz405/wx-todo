@@ -5,7 +5,7 @@
       <text class='head-finish' bindtap='save'>完成</text>
     </view>
     <view class='main'>
-      <image class='icon' src='../../images/pic25.png'></image>
+      <image class='icon' src='../../images/pic{{pic_index}}.png' bindtap='get_pic_index'></image>
       <input class='title' type='text' placeholder='----   起个标题呐    ----' bindinput='get_title' maxlength='20'></input>
     </view>
     <view class='note'>

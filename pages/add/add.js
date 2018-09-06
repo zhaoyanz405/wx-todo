@@ -6,6 +6,7 @@ Page({
    */
   data: {
     note: {'id': Date.now()},
+    pic_index: Math.floor(Math.random() * 62),
   },
 
   /**
@@ -63,16 +64,16 @@ Page({
 
   },
   get_title: function (e) {
-    this.data.note['title'] = e.detail.value;
+    this.data.note['title'] = e.detail.value.trim();
   },
   noting: function (e) {
-    var content = e.detail.value;
+    var content = e.detail.value.trim();
     this.data.note['content'] = content;
     this.data.note['length'] = content.length;
   },
   save: function (e) {
-    
-    if(this.data.note === null || this.data.note === '') {
+    console.log(this.data.note['title'])
+    if (this.data.note['title'] === undefined || this.data.note['title'] === '' || this.data.note['content'] === undefined || this.data.note['content'] === '') {
       wx.showModal({
         content: '不能什么都不写就保存哦~~',
         showCancel: false,
@@ -95,5 +96,8 @@ Page({
         }
       })
     }
+  },
+  get_pic_index: function() {
+    this.data.pic_index = Math.floor(Math.random() * 62)
   }
 })
