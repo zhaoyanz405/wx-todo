@@ -44,6 +44,13 @@ Page({
     wx.getStorage({
       key: 'all_note',
       success: function (res) {
+        var first_note = {}
+        if (res.data === undefined || res.data == [] || res.data == '') {
+          first_note['id'] = Date.now()
+          first_note['title'] = '我爱猪猪'
+          first_note['content'] = '猪猪看这里~~'
+          res.data = [first_note]
+        }
         that.setData({
           notes: res.data
         })
@@ -64,6 +71,18 @@ Page({
       success: function (res) { },
       fail: function (res) { },
       complete: function (res) { },
+    })
+  },
+  delete_note: function(e) {
+    var notes = this.data.notes;
+    console.log(notes)
+    notes.splice(e.target.dataset.id, 1)
+    this.setData({
+      notes: notes
+    })
+    wx.setStorage({
+      key: 'all_note',
+      data: notes,
     })
   }
 })

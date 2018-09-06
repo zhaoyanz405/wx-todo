@@ -18,7 +18,7 @@
     <view class='item-title'>
       <image class='small_icon head_icon' src='../../images/pic{{index + 1}}.png'></image>
       <text selectable='false'>{{notes[index].title}}</text>
-      <image class='small_icon icon-off' src='../../images/off.png'></image>
+      <image class='small_icon icon-off' src='../../images/off.png' bindtap='delete_note' data-id='{{index}}'></image>
     </view>
   </view>
   <view class='item-content'>
